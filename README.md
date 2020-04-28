@@ -1,3 +1,3 @@
-# Kaggle-Titanic
+# Kaggle-Competition
  
-Practice feature engineering tricks on Titanic project, predicting whether the passgengers are survived.
+Practice Kaggle Competition
