@@ -1,3 +1,5 @@
-# Kaggle-Titanic
+# Kaggle-Competition
  
-Practice feature engineering tricks on Titanic project, predicting whether the passgengers are survived.
+Practice Kaggle Competition
+
+1. Titanic (Feature Engineering, Logstic Regression, Bagging)
