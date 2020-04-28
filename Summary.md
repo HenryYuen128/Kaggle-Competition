@@ -18,7 +18,7 @@
 关于L1为什么比L2正则更容易获得稀疏解的解释：
 https://www.zhihu.com/question/37096933
 
-假设费用函数 L 与某个参数 x 的关系如图所示：
+假设损失函数 L 与某个参数 x 的关系如图所示：
 
 ![image](https://github.com/HenryYuen128/Kaggle-Titanic/blob/master/pic/costFunction.jpeg)
 
@@ -28,14 +28,14 @@ https://www.zhihu.com/question/37096933
 ![image](https://github.com/HenryYuen128/Kaggle-Titanic/blob/master/pic/l2%20regularization.jpeg)
 
 最优的 x 在黄点处，x 的绝对值减小了，但依然非零。
-而如果施加 L1 regularization，则新的费用函数（L+C|x|）如图中粉线所示：
+而如果施加 L1 regularization，则新的损失函数（L+C|x|）如图中粉线所示：
 
 ![image](https://github.com/HenryYuen128/Kaggle-Titanic/blob/master/pic/l1%20regularization.jpeg)
 
 最优的 x 就变成了 0。这里利用的就是绝对值函数的尖峰。
-两种 regularization 能不能把最优的 x 变成 0，取决于原先的费用函数在 0 点处的导数。
+两种 regularization 能不能把最优的 x 变成 0，取决于原先的损失函数在 0 点处的导数。
 如果本来导数不为 0，那么施加 L2 regularization 后导数依然不为 0，最优的 x 也不会变成 0。
-而施加 L1 regularization 时，只要 regularization 项的系数 C 大于原先费用函数在 0 点处的导数的绝对值，x = 0 就会变成一个极小值点。
+而施加 L1 regularization 时，只要 regularization 项的系数 C 大于原先损失函数在 0 点处的导数的绝对值，x = 0 就会变成一个极小值点。
 上面只分析了一个参数 x。事实上 L1 regularization 会使得许多参数的最优值变成 0，这样模型就稀疏了。
 
 L1和L2正则化都可以解决过拟合的问题，但方式不同：
