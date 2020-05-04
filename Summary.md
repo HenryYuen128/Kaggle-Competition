@@ -59,5 +59,5 @@ L1通过抛弃某些特征，L2通过控制所用权重的和的大小
 
 ![image](https://github.com/HenryYuen128/Kaggle-Competition/blob/master/pic/stacking.png)
 
-##### Hold Out Predictions for Stacking
+##### Hold Out Predictions for Average Stacking
 将traning set分成N folds, N-1 folds作为training set, 1 fold作为test set。每个baseline model在重新分配的training set上运行，共运行N次，得到N个predicitons，取N个predictions的平均值作为新的features。假设有n个样本，分成5 folds, M个basline models，则新的features矩阵X维度为n*(M)。 Ensemble model使用X进行训练。
