@@ -58,3 +58,6 @@ L1通过抛弃某些特征，L2通过控制所用权重的和的大小
 用训练集中**部分数据**对j个baseline模型进行训练（使用全部训练集会造成过拟合的问题），第j个baseline模型对第i个训练样本的预测值将作为新的训练集中第i个样本的第j个特征值，最后基于新的训练集使用新模型进行训练。同理，预测的过程也要先经过所有baseline模型的预测形成新的测试集，最后再对测试集进行预测
 
 ![image](https://github.com/HenryYuen128/Kaggle-Competition/blob/master/pic/stacking.png)
+
+##### Hold Out Predictions for Stacking
+将traning set分成N folds, N-1 folds作为training set, 1 fold作为test set。每个baseline model在重新分配的training set上运行，共运行N次，得到N个predicitons，取N个predictions的平均值作为新的features。假设有n个样本，分成5 folds, M个basline models，则新的features矩阵X维度为n*(M)。 Ensemble model使用X进行训练。
